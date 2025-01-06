@@ -24,6 +24,12 @@
         row-gap: rem(24);
       }
     }
+    &:has(a) a {
+      @include mobile-small-above {
+        align-self: start;
+        justify-self: end;
+      }
+    }
     &:not(:has(> a)) .section__header-info {
       max-width: rem(590);
     }

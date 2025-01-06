@@ -17,7 +17,12 @@
       --size: #{rem(20)};
     }
   }
-
+  &--arrow-left {
+    &::before {
+      order: 2;
+      background-image: var(--icon);
+    }
+  }
   &--eye {
     &::before {
       background-image: var(--icon);

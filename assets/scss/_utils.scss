@@ -22,6 +22,12 @@
   }
 }
 
+.link-more {
+  @include fluid-text(22, 18);
+
+  font-weight: 500;
+}
+
 .tag {
   font-weight: 500;
   font-size: rem(16);
