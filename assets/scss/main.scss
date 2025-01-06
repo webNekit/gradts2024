@@ -1,0 +1,15 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+/** блоки и компоненты */
+@use "./blocks/button";
+@use "./blocks/icons";
+@use "./blocks/header";
+@use "./blocks/callback";
+@use "./blocks/navigation";
+@use "./blocks/hero";
+@use "./blocks/section";
+@use "./blocks/story-grid";

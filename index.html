@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Base meta -->
+    <meta name="title" content="Заголовок страницы – до 60 символов">
+    <meta name="description" content="Описание страницы – до 160 символов">
+    <meta name="keywords" content="ключевые, слова, через, запятую">
+    <meta name="author" content="Имя автора или компании">
+    <!-- Robots index -->
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph (OG) для социальных сетей -->
+    <meta property="og:title" content="Заголовок страницы">
+    <meta property="og:description" content="Описание страницы">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Название сайта">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Заголовок страницы">
+    <meta name="twitter:description" content="Описание страницы">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <meta name="twitter:site" content="@YourTwitterHandle">
+    <!-- Geo & Region  -->
+    <meta name="geo.region" content="RU-MOW">
+    <meta name="geo.placename" content="Волгоград">
+    <meta name="geo.position" content="48.8047;44.5858">
+    <meta name="ICBM" content="48.8047;44.5858">
+    <!-- Apple и Android -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Градтехнострой">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://example.com">
+    <!-- Favicons -->
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/icons/favicon.ico">
+    <title>Градтехнострой | Главная</title>
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <script src="./assets/scripts/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="assets/scss/blocks/_section.scss">
+</head>
+<body class="application" id="application">
+    <div class="application__wrapper" id="application-wrapper">
+        <header class="header" id="header" data-header>
+            <div class="header__container container">
+                <div class="header__logo logo">
+                    <a aria-label="Главная" title="Главная" href="./index.html" class="logo">
+                        <img src="./assets/images/logo.svg" width="212" height="25" alt="Логотип компании градтехнострой" class="logo__brand">
+                    </a>
+                </div>
+                <div class="header__overlay-menu" id="menu-overlay" data-overlay-menu>
+                    <nav aria-label="Основная навигация" class="header__navigation navigation" id="navigation">
+                        <ul aria-label="Список навигации" class="navigation__list">
+                            <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                                <a aria-label="Главная" title="Главная" href="./index.html" class="navigation__list-link">Главная</a>
+                            </li>
+                            <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                                <a aria-label="О компании" title="О компании" href="./about.html" class="navigation__list-link">О компании</a>
+                            </li>
+                            <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                                <a aria-label="Услуги" title="Услуги" href="./services.html" class="navigation__list-link">Услуги</a>
+                            </li>
+                            <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                                <a aria-label="Башененные краны" title="Башененные краны" href="./index.html" class="navigation__list-link">Краны</a>
+                            </li>
+                            <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                                <a aria-label="Запасные части" title="Запасные части" href="./index.html" class="navigation__list-link">Запасные части</a>
+                            </li>
+                            <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                                <a aria-label="Новости" title="Новости" href="./index.html" class="navigation__list-link">Новости</a>
+                            </li>
+                            <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                                <a aria-label="Контакты" title="Контакты" href="./contacts.html" class="navigation__list-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul aria-label="Список контактных связей" class="header__callback callback">
+                        <li aria-label="Элемент списка контактных связей" class="callback__item">
+                            <a aria-label="Номер телефона +7 (844) 257-40-02" title="Номер телефона +7 (844) 257-40-02" href="tel:+78442574002" class="callback__phone">
+                                <span class="icon icon--phone" style="--icon: url('../icons/phone.svg')">+7 (844) 257-40-02</span>
+                            </a>
+                        </li>
+                        <li aria-label="Элемент списка контактных связей" class="callback__item">
+                            <button aria-label="Заказать звонок" title="Заказать звонок" class="callback__button-modal button button--outline" data-callback-modal>Заказать звонок</button>
+                        </li>
+                    </ul>
+                </div>
+                <button aria-label="Открыть мобильное меню" title="Открыть мобильное меню" class="header__burger-menu burger-menu visible-mobile" data-burger-menu>
+                    <i data-lucide="align-right"></i>
+                </button>
+            </div>
+        </header>
+        <main class="main" id="main">
+            <div class="main__wrapper">
+                <section aria-labelledby="hero-title" class="hero" id="hero">
+                    <div class="hero__container container">
+                        <div class="hero__content">
+                            <div class="hero__content-preview">
+                                <img loading="lazy" width="655" height="700" src="./assets/images/hero/img-2.jpg" alt="Башенный кран" class="hero__content-img">
+                            </div>
+                            <div class="hero__content-info">
+                                <div class="hero__content-upper">
+                                    <h1 id="hero-title" class="hero__title h1">Your success begins with our effective contracts</h1>
+                                </div>
+                                <div class="hero__content-bottom">
+                                    <a aria-label="Посмотреть услуги" title="Посмотреть услуги" href="./services.html" class="hero__services-link button button--primary">Посмотреть услуги</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- start about -->
+                <section aria-labelledby="about-title" aria-describedby="about-description" class="section about" id="about-section">
+                    <div class="container section__container">
+                        <div class="section__wrapper col col--2">
+                            <div class="section__aside">
+                                <p class="tag">Наша миссия</p>
+                            </div>
+                            <div class="section__content">
+                                <div class="section__content-info">
+                                    <h2 id="about-title" class="section__title h2">Our mission is to deliver  high quality work</h2>
+                                    <div id="about-description" class="section__description">
+                                        <p>
+                                            Arcu metus donec mi amet phasellus pulvinar sit. Vel non fusce
+                                            consectetur nunc id sed eu arcu. Eget suscipit quam vehicula
+                                            cras ac sed nunc molestie. Feugiat etiam sed rhoncus et eu.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a aria-labelledby="Читать подробнее" title="Читать подробнее" href="./about.html" class="section__button button button--primary">Читать подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end about -->
+                <section aria-labelledby="story-title" aria-describedby="story-description" class="section story" id="story-section">
+                    <div class="section__container container">
+                        <header class="section__header">
+                            <div class="section__header-info">
+                                <p class="section__header-tag tag">Наша история</p>
+                                <h2 class="section__header-title h2" id="story-title">An exceptional quality that can’t be beaten</h2>
+                            </div>
+                        </header>
+                        <div class="section__body">
+                            <ul class="section__grid story-grid">
+                                <li class="story-grid__item">
+                                    <div class="story-grid__item-body">
+                                        <img loading="lazy" src="./assets/images/story/img-1.png" alt="Башенные краны градтехнострой" width="430" height="359" class="story-grid__item-img">
+                                    </div>
+                                </li>
+                                <li class="story-grid__item">
+                                    <div class="story-grid__item-body">
+                                        <img loading="lazy" src="./assets/images/story/img-3.png" alt="Башенные краны градтехнострой" width="430" height="765" class="story-grid__item-img">
+                                    </div>
+                                </li>
+                                <li class="story-grid__item">
+                                    <div class="story-grid__item-body">
+                                        <img loading="lazy" src="./assets/images/story/img-2.png" alt="Башенные краны градтехнострой" width="430" height="510" class="story-grid__item-img">
+                                    </div>
+                                </li>
+                                <li class="story-grid__item">
+                                    <div class="story-grid__item-body">
+                                        <div class="story-grid__item-text" id="story-description">
+                                            <p>
+                                                Eget ligula volutpat tellus in lectus nibh
+                                                elementum quis. Tortor interdum
+                                                pellentesque cras donec mollis mattis
+                                                orci. Pellentesque orci euismod semper
+                                                velit augue. Ut platea pharetra porttitor
+                                                metus cras odio pulvinar. Et ligula urna.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="story-grid__item">
+                                    <div class="story-grid__item-body">
+                                        <div class="story-grid__item-text">
+                                            <p>
+                                                Eget ligula volutpat tellus in lectus nibh
+                                                elementum quis. Tortor interdum
+                                                pellentesque cras donec mollis mattis
+                                                orci. Pellentesque orci euismod semper
+                                                velit augue. Ut platea pharetra porttitor
+                                                metus cras odio pulvinar. Et ligula urna.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- start -->
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
