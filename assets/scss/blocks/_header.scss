@@ -8,10 +8,9 @@
   left: 0;
   padding-block: rem(16);
   background-color: hsl(var(--background));
-  transition: box-shadow var(--transition-duration);
   &.is-scroll {
-    transition: box-shadow var(--transition-duration);
-    box-shadow: 0 rem(2) rem(12) #c8d5fe;
+    transition: border-bottom var(--transition-duration);
+    border-bottom: rem(1) solid hsl(var(--border));
   }
   &__container {
     display: flex;

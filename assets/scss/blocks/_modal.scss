@@ -37,7 +37,7 @@
     color: inherit;
   }
   &__close-btn {
-    --size: #{rem(52)};
+    --size: #{rem(64)};
     @include square(var(--size));
 
     cursor: pointer;
@@ -46,13 +46,14 @@
     right: 0;
     border: none;
     background-color: hsl(var(--primary));
+    border-bottom-left-radius: var(--radius);
     &:has(svg) {
       svg {
         stroke: hsl(var(--primary-foreground));
       }
     }
     @include mobile {
-      --size: #{rem(42)};
+      --size: #{rem(52)};
     }
   }
 }
