@@ -41,7 +41,7 @@
       object-fit: cover;
       object-position: center;
       transform: scale(1);
-      transition: transform 200ms;
+      transition: transform 350ms;
       @include mobile-small {
         height: 100%;
         max-height: 100%;
