@@ -1090,12 +1090,18 @@ a[class] {
 .news-card__info {
   z-index: 10;
   position: relative;
+  max-width: calc(100% - clamp(5.125rem, 3.8823529412rem + 5.0980392157vw, 10rem));
   padding: clamp(1.5rem, 1.3725490196rem + 0.522875817vw, 2rem);
   display: grid;
   row-gap: 1.5rem;
   margin-block-start: auto;
   background-color: hsl(var(--card));
   border-radius: 1.5rem;
+}
+@media (width <= 48.06125rem) {
+  .news-card__info {
+    max-width: 100%;
+  }
 }
 .news-card__info-detail {
   display: grid;
