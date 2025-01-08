@@ -19,17 +19,26 @@
     width: 100%;
   }
   &__label {
-    margin-inline-start: rem(16);
     font-size: rem(16);
+    color: hsl(var(--muted-foreground));
   }
   &__input {
-    width: 100%;
+    min-height: fluid(78, 64);
+    background-color: transparent;
     border: none;
-    border-radius: rem(24);
-    padding: rem(16) rem(16);
-    background-color: hsl(var(--muted));
-    @include hover {
-
+    @include fluid-text(22, 19);
+    color: hsl(var(--foreground));
+    border-bottom: rem(1) solid hsl(var(--border));
+    &::placeholder {
+      @include fluid-text(22, 19);
+      color: hsl(var(--foreground));
+    }
+  }
+  &__button {
+    justify-self: start;
+    @include mobile-small {
+      width: 100%;
+      justify-self: center;
     }
   }
 }

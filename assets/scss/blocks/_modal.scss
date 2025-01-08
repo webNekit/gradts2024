@@ -6,7 +6,7 @@
   z-index: 100;
   transform: translateY(-100%);
   transition: transform 300ms;
-  background-color: hsla(var(--popover), 0.8);
+  background-color: hsla(var(--secondary), .95);
   &.is-active {
     transform: translateY(0);
   }
@@ -25,9 +25,8 @@
     display: grid;
     row-gap: rem(32);
     padding: rem(32);
-    border-radius: var(--radius);
-    color: hsl(var(--secondary-foreground));
-    background-color: hsl(var(--secondary));
+    border-radius: rem(24);
+    background-color: hsl(var(--card));
   }
   &__header {
     display: grid;

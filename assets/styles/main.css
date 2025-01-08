@@ -400,6 +400,9 @@ h6, .h6 {
 html.is-lock {
   overflow: hidden;
 }
+html.off-scroll {
+  overflow: hidden;
+}
 
 body {
   font-size: clamp(0.875rem, 0.8112745098rem + 0.2614379085vw, 1.125rem);
@@ -762,6 +765,16 @@ a[class] {
     justify-self: end;
   }
 }
+.section__header:has(.section__header-right) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 1.2132352941rem + 1.1764705882vw, 2.625rem);
+}
+@media (width <= 48.06125rem) {
+  .section__header:has(.section__header-right) {
+    grid-template-columns: 1fr;
+  }
+}
 .section__header:not(:has(> a)) .section__header-info {
   max-width: 36.875rem;
 }
@@ -1097,7 +1110,7 @@ a[class] {
   z-index: 100;
   transform: translateY(-100%);
   transition: transform 300ms;
-  background-color: hsla(var(--popover), 0.8);
+  background-color: hsla(var(--secondary), 0.95);
 }
 .modal.is-active {
   transform: translateY(0);
@@ -1117,9 +1130,8 @@ a[class] {
   display: grid;
   row-gap: 2rem;
   padding: 2rem;
-  border-radius: var(--radius);
-  color: hsl(var(--secondary-foreground));
-  background-color: hsl(var(--secondary));
+  border-radius: 1.5rem;
+  background-color: hsl(var(--card));
 }
 .modal__header {
   display: grid;
@@ -1169,16 +1181,97 @@ a[class] {
   width: 100%;
 }
 .form__label {
-  margin-inline-start: 1rem;
   font-size: 1rem;
+  color: hsl(var(--muted-foreground));
 }
 .form__input {
-  width: 100%;
+  min-height: clamp(4rem, 3.7769607843rem + 0.9150326797vw, 4.875rem);
+  background-color: transparent;
   border: none;
-  border-radius: 1.5rem;
-  padding: 1rem 1rem;
-  background-color: hsl(var(--muted));
+  font-size: clamp(1.1875rem, 1.1397058824rem + 0.1960784314vw, 1.375rem);
+  color: hsl(var(--foreground));
+  border-bottom: 0.0625rem solid hsl(var(--border));
 }
+.form__input::placeholder {
+  font-size: clamp(1.1875rem, 1.1397058824rem + 0.1960784314vw, 1.375rem);
+  color: hsl(var(--foreground));
+}
+.form__button {
+  justify-self: start;
+}
+@media (width <= 30.06125rem) {
+  .form__button {
+    width: 100%;
+    justify-self: center;
+  }
+}
+
+.contacts-section {
+  padding-block-end: 4rem;
+}
+.contacts-section__inner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 1.0539215686rem + 1.8300653595vw, 3.25rem);
+  padding: clamp(1rem, 0.8725490196rem + 0.522875817vw, 1.5rem);
+  padding-block-start: clamp(3.375rem, 2.7696078431rem + 2.4836601307vw, 5.75rem);
+  border-radius: 1.5rem;
+  color: hsl(var(--secondary-foreground));
+  background-color: hsl(var(--secondary));
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (width <= 48.06125rem) {
+  .contacts-section__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.contacts-section__alt {
+  display: grid;
+  row-gap: 3rem;
+}
+.contacts-section__alt-top {
+  display: grid;
+  row-gap: 1rem;
+}
+.contacts-section__title {
+  color: currentColor;
+}
+.contacts-section__description {
+  font-size: clamp(1.125rem, 1.0612745098rem + 0.2614379085vw, 1.375rem);
+  color: hsl(var(--muted-foreground));
+}
+.contacts-section__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(3rem, 2.6495098039rem + 1.4379084967vw, 4.375rem);
+}
+@media (width <= 48.06125rem) {
+  .contacts-section__list {
+    grid-template-columns: 1fr;
+    column-gap: unset;
+    row-gap: 1.5rem;
+  }
+}
+.contacts-section__list-link {
+  display: grid;
+  row-gap: 1rem;
+}
+.contacts-section__list-link-index {
+  font-size: clamp(1rem, 0.9044117647rem + 0.3921568627vw, 1.375rem);
+  color: hsl(var(--muted-foreground));
+}
+.contacts-section__list-link-value {
+  font-size: clamp(1.25rem, 1.1862745098rem + 0.2614379085vw, 1.5rem);
+  color: hsl(var(--secondary-foreground));
+}
+.contacts-section__form {
+  padding: clamp(1.5rem, 1.2450980392rem + 1.045751634vw, 2.5rem);
+  border-radius: 1.5rem;
+  background-color: hsl(var(--card));
+}
+
 .footer-navbar {
   justify-self: center;
 }
@@ -1192,7 +1285,7 @@ a[class] {
   gap: 0.875rem;
 }
 .footer-navbar__menu-link {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .footer-contacts {
@@ -1217,7 +1310,7 @@ a[class] {
   grid-template-columns: 1fr 1fr;
   padding: 0.75rem;
   column-gap: 0.875rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .footer-contacts__link-index {
   color: hsl(var(--muted-foreground));

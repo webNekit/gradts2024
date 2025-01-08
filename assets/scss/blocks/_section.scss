@@ -30,6 +30,14 @@
         justify-self: end;
       }
     }
+    &:has(.section__header-right) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: fluid(42, 24);
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
     &:not(:has(> a)) .section__header-info {
       max-width: rem(590);
     }
@@ -37,6 +45,7 @@
       display: grid;
       row-gap: rem(14);
     }
+
   }
   &__content {
     display: grid;

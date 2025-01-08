@@ -7,7 +7,7 @@ class Modal {
 
     stateClasses = {
         isActive: 'is-active',
-        isLock: 'is-lock',
+        isLock: 'off-scroll',
     };
 
     constructor() {
