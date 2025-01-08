@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/** базовые компоненты */
 /**
   Нормализация блочной модели
  */
@@ -1270,6 +1271,70 @@ a[class] {
   padding: clamp(1.5rem, 1.2450980392rem + 1.045751634vw, 2.5rem);
   border-radius: 1.5rem;
   background-color: hsl(var(--card));
+}
+
+.statistics__list {
+  display: grid;
+  row-gap: 2.625rem;
+}
+.statistics__list-card {
+  display: grid;
+  row-gap: 2.375rem;
+}
+.statistics__list-card-count {
+  font-size: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
+}
+.statistics__list-card-count .stat-text {
+  color: hsl(var(--foreground));
+}
+.statistics__list-card-count .plus {
+  color: hsl(var(--primary));
+}
+
+.about-alt__description {
+  font-size: clamp(1rem, 0.9044117647rem + 0.3921568627vw, 1.375rem);
+  line-height: 1.3;
+  color: hsl(var(--muted-foreground));
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, -0.1887254902rem + 6.9281045752vw, 8.125rem);
+}
+@media (width <= 48.06125rem) {
+  .advantages__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (width <= 30.06125rem) {
+  .advantages__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantage-card {
+  padding-block-end: clamp(1.5rem, 1.3406862745rem + 0.6535947712vw, 2.125rem);
+  border-block-end: 0.0625rem solid hsl(var(--border));
+}
+.advantage-card__body {
+  display: grid;
+  row-gap: 1rem;
+}
+.advantage-card__body-alt {
+  display: grid;
+  row-gap: 1rem;
+}
+.advantage-card__body-description {
+  font-size: clamp(1rem, 0.9362745098rem + 0.2614379085vw, 1.25rem);
+  color: hsl(var(--muted-foreground));
+  line-height: 1.2;
+}
+.advantage-card__icon:has(svg) svg {
+  --size: 2.625rem;
+  width: var(--size);
+  height: var(--size);
+  stroke: hsl(var(--primary));
 }
 
 .footer-navbar {
