@@ -1,10 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Base meta -->
+    <meta name="title" content="Заголовок страницы – до 60 символов">
+    <meta name="description" content="Описание страницы – до 160 символов">
+    <meta name="keywords" content="ключевые, слова, через, запятую">
+    <meta name="author" content="Имя автора или компании">
+    <!-- Robots index -->
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph (OG) для социальных сетей -->
+    <meta property="og:title" content="Заголовок страницы">
+    <meta property="og:description" content="Описание страницы">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Название сайта">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Заголовок страницы">
+    <meta name="twitter:description" content="Описание страницы">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <meta name="twitter:site" content="@YourTwitterHandle">
+    <!-- Geo & Region  -->
+    <meta name="geo.region" content="RU-MOW">
+    <meta name="geo.placename" content="Волгоград">
+    <meta name="geo.position" content="48.8047;44.5858">
+    <meta name="ICBM" content="48.8047;44.5858">
+    <!-- Apple и Android -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Градтехнострой">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://example.com">
+    <!-- Favicons -->
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/icons/favicon.ico">
+    <title>Градтехнострой | Главная</title>
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <script src="./assets/scripts/imask.js" defer></script>
+    <script src="./assets/scripts/main.js" type="module" defer></script>
 </head>
-<body>
-
+<body class="application" id="application">
+<div class="application__wrapper" id="application-wrapper">
+    <header class="header" id="header" data-header>
+        <div class="header__container container">
+            <div class="header__logo logo">
+                <a aria-label="Главная" title="Главная" href="./index.html" class="logo">
+                    <img src="./assets/images/logo.svg" width="212" height="25" alt="Логотип компании градтехнострой" class="logo__brand">
+                </a>
+            </div>
+            <div class="header__overlay-menu" id="menu-overlay" data-overlay-menu>
+                <nav aria-label="Основная навигация" class="header__navigation navigation" id="navigation">
+                    <ul aria-label="Список навигации" class="navigation__list">
+                        <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                            <a aria-label="Главная" title="Главная" href="./index.html" class="navigation__list-link">Главная</a>
+                        </li>
+                        <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                            <a aria-label="О компании" title="О компании" href="./about.html" class="navigation__list-link">О компании</a>
+                        </li>
+                        <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                            <a aria-label="Услуги" title="Услуги" href="./services.html" class="navigation__list-link">Услуги</a>
+                        </li>
+                        <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                            <a aria-label="Башененные краны" title="Башененные краны" href="./index.html" class="navigation__list-link">Краны</a>
+                        </li>
+                        <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                            <a aria-label="Запасные части" title="Запасные части" href="./index.html" class="navigation__list-link">Запасные части</a>
+                        </li>
+                        <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                            <a aria-label="Новости" title="Новости" href="./index.html" class="navigation__list-link">Новости</a>
+                        </li>
+                        <li aria-label="Элемент списка навигации" class="navigation__list-item">
+                            <a aria-label="Контакты" title="Контакты" href="./contacts.html" class="navigation__list-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul aria-label="Список контактных связей" class="header__callback callback">
+                    <li aria-label="Элемент списка контактных связей" class="callback__item">
+                        <a aria-label="Номер телефона +7 (844) 257-40-02" title="Номер телефона +7 (844) 257-40-02" href="tel:+78442574002" class="callback__phone">
+                            <span class="icon icon--phone" style="--icon: url('../icons/phone.svg')">+7 (844) 257-40-02</span>
+                        </a>
+                    </li>
+                    <li aria-label="Элемент списка контактных связей" class="callback__item">
+                        <button aria-label="Заказать звонок" title="Заказать звонок" class="callback__button-modal button button--outline" data-callback-button>Заказать звонок</button>
+                    </li>
+                </ul>
+            </div>
+            <button aria-label="Открыть мобильное меню" title="Открыть мобильное меню" class="header__burger-menu burger-menu visible-mobile" data-burger-menu>
+                <i data-lucide="align-right"></i>
+            </button>
+        </div>
+    </header>
+    <main class="main" id="main">
+        <div class="main__wrapper">
+            <section aria-labelledby="services-title" class="section services" id="services-section">
+                <div class="section__container container">
+                    <header class="section__header">
+                        <div class="section__header-info">
+                            <p class="section__header-tag tag">Наши услуги</p>
+                            <h2 class="section__header-title h2" id="services-title">A comprehensive set of services</h2>
+                        </div>
+                        <div class="section__header-right">
+                            <div class="section__description" id="products-description">
+                                <p>Pellentesque sapien in consequat bibendum  mattis amet molestie gravida neque venenatis nibh purus est orci mauris.</p>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="section__body">
+                        <ul aria-label="Список услуг" class="services-list">
+                            <li aria-label="Элемент списка услуг" class="services-list__item">
+                                <article aria-label="Карточка услуги" class="services-list__item-card service-card">
+                                    <div aria-hidden="true" class="service-card__count"></div>
+                                    <div class="service-card__body">
+                                        <h3 class="service-card__body-title h3">Remodel construction</h3>
+                                        <div class="service-card__body-description">
+                                            <p>Sagittis feugiat purus volutpat blandit id. Euismod et lacus diam quisque nunc fames morbi nunc in. Enim nulla lacus vitae nunc.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li aria-label="Элемент списка услуг" class="services-list__item">
+                                <article aria-label="Карточка услуги" class="services-list__item-card service-card">
+                                    <div aria-hidden="true" class="service-card__count"></div>
+                                    <div class="service-card__body">
+                                        <h3 class="service-card__body-title h3">Remodel construction</h3>
+                                        <div class="service-card__body-description">
+                                            <p>Sagittis feugiat purus volutpat blandit id. Euismod et lacus diam quisque nunc fames morbi nunc in. Enim nulla lacus vitae nunc.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li aria-label="Элемент списка услуг" class="services-list__item">
+                                <article aria-label="Карточка услуги" class="services-list__item-card service-card">
+                                    <div aria-hidden="true" class="service-card__count"></div>
+                                    <div class="service-card__body">
+                                        <h3 class="service-card__body-title h3">Remodel construction</h3>
+                                        <div class="service-card__body-description">
+                                            <p>Sagittis feugiat purus volutpat blandit id. Euismod et lacus diam quisque nunc fames morbi nunc in. Enim nulla lacus vitae nunc.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li aria-label="Элемент списка услуг" class="services-list__item">
+                                <article aria-label="Карточка услуги" class="services-list__item-card service-card">
+                                    <div aria-hidden="true" class="service-card__count"></div>
+                                    <div class="service-card__body">
+                                        <h3 class="service-card__body-title h3">Remodel construction</h3>
+                                        <div class="service-card__body-description">
+                                            <p>Sagittis feugiat purus volutpat blandit id. Euismod et lacus diam quisque nunc fames morbi nunc in. Enim nulla lacus vitae nunc.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li aria-label="Элемент списка услуг" class="services-list__item">
+                                <article aria-label="Карточка услуги" class="services-list__item-card service-card">
+                                    <div aria-hidden="true" class="service-card__count"></div>
+                                    <div class="service-card__body">
+                                        <h3 class="service-card__body-title h3">Remodel construction</h3>
+                                        <div class="service-card__body-description">
+                                            <p>Sagittis feugiat purus volutpat blandit id. Euismod et lacus diam quisque nunc fames morbi nunc in. Enim nulla lacus vitae nunc.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div role="dialog" aria-labelledby="title-modal" aria-describedby="text-modal" aria-modal="true" aria-label="Модальное меню" class="modal" id="callback-modal" data-callback-modal>
+        <div class="modal__wrapper">
+            <button aria-label="Закрыть модальное окно" title="Закрыть модальное окно" type="button" class="modal__close-btn" data-callback-close>
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal__container container">
+                <div class="modal__inner">
+                    <div class="modal__header">
+                        <h2 class="modal__title h3" id="title-modal">Заявка на обратную связь</h2>
+                        <p class="modal__description" id="text-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, veritatis.</p>
+                    </div>
+                    <div class="modal__body">
+                        <div class="modal__form form">
+                            <div class="form__group">
+                                <div class="form__item">
+                                    <label class="form__label" for="first-name">Имя:</label>
+                                    <input type="text" name="first-name" class="form__input" id="first-name" autocomplete="off" placeholder="Иван" required>
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label" for="first-name">Фамилия:</label>
+                                    <input type="text" name="first-name" class="form__input" id="last-name" autocomplete="off" placeholder="Иванов" required>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <div class="form__item">
+                                    <label class="form__label" for="email">Email:</label>
+                                    <input type="email" name="email" class="form__input" id="email" autocomplete="off" placeholder="ivan95@example.ru" required>
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label" for="phone">Телефон:</label>
+                                    <input type="text" name="phone" class="form__input" id="phone" autocomplete="off" placeholder="+7(000)000-00-00" required>
+                                </div>
+                            </div>
+                            <button aria-label="Отправить" title="Отправить" type="button" class="form__button button button--primary">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer__upper">
+            <div class="footer__upper-inner container">
+                <div class="footer__logo logo">
+                    <a aria-label="Главная" title="Главная" href="./index.html" class="logo">
+                        <img src="./assets/images/logo.svg" width="212" height="25" alt="Логотип компании градтехнострой" class="logo__brand">
+                    </a>
+                </div>
+                <nav aria-label="Навигация в подвале" class="footer__navbar footer-navbar">
+                    <menu class="footer-navbar__menu">
+                        <li class="footer-navbar__menu-item">
+                            <a aria-label="О компании" title="О компании" href="./about.html" class="footer-navbar__menu-link">О компании</a>
+                        </li>
+                        <li class="footer-navbar__menu-item">
+                            <a aria-label="Услуги" title="Услуги" href="./services.html" class="footer-navbar__menu-link">Услуги</a>
+                        </li>
+                        <li class="footer-navbar__menu-item">
+                            <a aria-label="Услуги" title="Услуги" href="./services.html" class="footer-navbar__menu-link">Услуги</a>
+                        </li>
+                        <li class="footer-navbar__menu-item">
+                            <a aria-label="Башенные краны" title="Башенные краны" href="./products.html" class="footer-navbar__menu-link">Башенные краны</a>
+                        </li>
+                        <li class="footer-navbar__menu-item">
+                            <a aria-label="Запасные части" title="Запасные части" href="./products.html" class="footer-navbar__menu-link">Запасные части</a>
+                        </li>
+                        <li class="footer-navbar__menu-item">
+                            <a aria-label="Новости" title="Новости" href="./news.html" class="footer-navbar__menu-link">Новости</a>
+                        </li>
+                    </menu>
+                </nav>
+                <div class="footer-contacts">
+                    <h2 class="footer-contacts__title h4">Наши контакты</h2>
+                    <ul class="footer__contacts footer-contacts__list">
+                        <li class="footer-contacts__item">
+                            <a href="tel:89692881531" class="footer-contacts__link footer-contacts__link--phone">
+                                <span class="footer-contacts__link-index">Моб.телефон:</span>
+                                <span class="footer-contacts__link-value">89692881531</span>
+                            </a>
+                        </li>
+                        <li class="footer-contacts__item">
+                            <a href="mailto:test@examlpe.com" class="footer-contacts__link footer-contacts__link--mail">
+                                <span class="footer-contacts__link-index">Email:</span>
+                                <span class="footer-contacts__link-value">nayskom@gmail.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom-inner container">
+                <p aria-label="© 2025 ГРАДТЕХНОСТРОЙ. Все права защищены" class="footer__copyright">© 2025 ГРАДТЕХНОСТРОЙ. Все права защищены</p>
+                <a aria-label="Дизайн и разработка сайта" href="" target="_blank" class="footer__dev-author">Дизайн и разработка сайта</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
 </body>
 </html>

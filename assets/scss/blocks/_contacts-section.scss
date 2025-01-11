@@ -6,8 +6,8 @@
    display: grid;
    grid-template-columns: repeat(2, minmax(0, 1fr));
    gap: fluid(52, 24);
-   padding: fluid(24, 16);
-   padding-block-start: fluid(92, 54);
+   padding: fluid(42, 24);
+   padding-block-start: fluid(114, 64);
    border-radius: rem(24);
    color: hsl(var(--secondary-foreground));
    background-color: hsl(var(--secondary));
@@ -31,7 +31,7 @@
  }
  &__description {
    @include fluid-text(22, 18);
-   color: hsl(var(--muted-foreground));
+   color: hsla(var(--secondary-foreground), .65);
  }
  &__list {
    display: grid;

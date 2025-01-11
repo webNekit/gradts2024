@@ -56,7 +56,8 @@
     }
   }
   &__description {
-    @include fluid-text(22, 18);
+    @include fluid-text(24, 18);
+    line-height: 1.3;
     color: hsl(var(--muted-foreground));
   }
   &__button {

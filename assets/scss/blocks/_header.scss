@@ -1,6 +1,7 @@
 @use "../helpers" as *;
 
 .header {
+  --blur: #{rem(10)};
   position: sticky;
   z-index: 80;
   top: 0;
